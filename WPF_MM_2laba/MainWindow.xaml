@@ -1,0 +1,57 @@
+﻿<Window x:Class="WPF_MM_2laba.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_MM_2laba"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Лабораторная работа 2" Height="500" Width="800" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Grid>
+        <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <DockPanel LastChildFill="False">
+                <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="20">
+                    <Label DockPanel.Dock="Top" HorizontalAlignment="Center" FontWeight="Bold" FontSize="30">Решение транспортной задачи</Label>
+                </StackPanel>
+                <StackPanel x:Name="topStck" DockPanel.Dock="Top" HorizontalAlignment="Center">
+                    <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Label>Количество столбцов</Label>
+                        <ComboBox x:Name="stolbItem">
+                            <ComboBoxItem>1</ComboBoxItem>
+                            <ComboBoxItem>2</ComboBoxItem>
+                            <ComboBoxItem>3</ComboBoxItem>
+                            <ComboBoxItem>4</ComboBoxItem>
+                            <ComboBoxItem>5</ComboBoxItem>
+                            <ComboBoxItem>6</ComboBoxItem>
+                            <ComboBoxItem>7</ComboBoxItem>
+                            <ComboBoxItem>8</ComboBoxItem>
+                            <ComboBoxItem>9</ComboBoxItem>
+                            <ComboBoxItem>10</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0 10 0 0">
+                        <Label>Количество строк</Label>
+                        <ComboBox x:Name="strItem">
+                            <ComboBoxItem>1</ComboBoxItem>
+                            <ComboBoxItem>2</ComboBoxItem>
+                            <ComboBoxItem>3</ComboBoxItem>
+                            <ComboBoxItem>4</ComboBoxItem>
+                            <ComboBoxItem>5</ComboBoxItem>
+                            <ComboBoxItem>6</ComboBoxItem>
+                            <ComboBoxItem>7</ComboBoxItem>
+                            <ComboBoxItem>8</ComboBoxItem>
+                            <ComboBoxItem>9</ComboBoxItem>
+                            <ComboBoxItem>10</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                    <Button x:Name="nxtButtin" Visibility="Visible" Content="Далее" Margin="0 10 0 0" Click="nxtButtin_Click"></Button>
+                </StackPanel>
+                <StackPanel x:Name="matrixStack" DockPanel.Dock="Top" HorizontalAlignment="Center" Orientation="Vertical" Margin="0 20 0 0">
+                
+                </StackPanel>
+                <Button x:Name="findResultButtin" DockPanel.Dock="Top" Visibility="Visible" Content="Решить" Margin="0 10 0 0" Click="findResultButtin_Click"></Button>
+                <Button x:Name="updateButtin" DockPanel.Dock="Top" Visibility="Visible" Content="Заново" Margin="0 10 0 0" Click="updateButtin_Click"></Button>
+            </DockPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
