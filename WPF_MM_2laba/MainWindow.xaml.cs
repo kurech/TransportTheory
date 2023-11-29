@@ -204,9 +204,12 @@ namespace WPF_MM_2laba
                 if (sum_supply == sum_demand)
                 {
                     double[,] solution = calculate(costs, supply, demand).Item1;
-                    double F = calculate(costs, supply, demand).Item2;
 
                     MessageBox.Show(message.ToString(), "Ход решения задачи:");
+                    message.Clear();
+
+                    double F = calculate(costs, supply, demand).Item2;
+                    message.Clear();
 
                     ShowArrayInMessageBox(solution, F);
                 }
